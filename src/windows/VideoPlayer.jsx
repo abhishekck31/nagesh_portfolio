@@ -17,7 +17,7 @@ const VideoPlayer = () => {
 
     const videoId = getVideoId(data.href);
     const embedUrl = videoId
-        ? `https://www.youtube.com/embed/${videoId}?autoplay=1&modestbranding=1&rel=0`
+        ? `https://www.youtube.com/embed/${videoId}?autoplay=1&modestbranding=1&rel=0&iv_load_policy=3&color=white`
         : null;
 
     return (

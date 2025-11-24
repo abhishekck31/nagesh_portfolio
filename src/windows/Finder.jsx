@@ -18,7 +18,9 @@ const Finder = () => {
     if (item.fileType === "pdf") return openWindow("resume");
 
     if (item.href && (item.href.includes("youtube.com") || item.href.includes("youtu.be"))) {
-      return openWindow("videoplayer", item);
+      openWindow("videoplayer", item);
+      setTimeout(() => useWindowStore.getState().focusWindow("videoplayer"), 0);
+      return;
     }
 
     if (["fig", "url"].includes(item.fileType) && item.href)
