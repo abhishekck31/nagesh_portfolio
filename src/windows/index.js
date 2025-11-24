@@ -8,6 +8,7 @@ import TextFile from "./file/Image";
 import ImageFile from "./file/Text";
 
 import MobileSafari from "./mobile/Safari";
+import VideoPlayer from "./VideoPlayer";
 
 export {
   Contact,
@@ -19,4 +20,5 @@ export {
   TextFile,
   ImageFile,
   MobileSafari,
+  VideoPlayer,
 };

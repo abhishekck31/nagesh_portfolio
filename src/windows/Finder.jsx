@@ -17,6 +17,10 @@ const Finder = () => {
 
     if (item.fileType === "pdf") return openWindow("resume");
 
+    if (item.href && (item.href.includes("youtube.com") || item.href.includes("youtu.be"))) {
+      return openWindow("videoplayer", item);
+    }
+
     if (["fig", "url"].includes(item.fileType) && item.href)
       return window.open(item.href, "_blank");
 

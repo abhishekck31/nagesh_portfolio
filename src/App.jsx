@@ -10,6 +10,7 @@ import {
   TextFile,
   ImageFile,
   MobileSafari,
+  VideoPlayer,
 } from "#windows";
 
 import { Draggable } from "gsap/Draggable";
@@ -48,6 +49,8 @@ const App = () => (
 
     <ImageFile />
     <MobileImage />
+
+    <VideoPlayer />
 
     <Contact />
     <MobileContact />
