@@ -10,12 +10,13 @@ import clsx from "clsx";
 const Dock = () => {
   const { openWindow, closeWindow, windows } = useWindowStore();
   const dockRef = useRef(null);
+  const iconRefs = useRef([]);
 
   useGSAP(() => {
     const dock = dockRef.current;
     if (!dock) return;
 
-    const icons = dock.querySelectorAll(".dock-icon");
+    const icons = iconRefs.current;
 
     const animateIcons = (mouseX) => {
       const { left } = dock.getBoundingClientRect();
@@ -75,7 +76,7 @@ const Dock = () => {
   return (
     <section id="dock">
       <div ref={dockRef} className="dock-container">
-        {dockApps.map((app) => (
+        {dockApps.map((app, index) => (
           <ul
             key={app.id ?? app.name}
             className={clsx(
@@ -84,27 +85,59 @@ const Dock = () => {
             )}
           >
             <li>
-              <button
-                type="button"
-                className="dock-icon"
-                aria-label={app.name}
-                onClick={() => toggleApp(app)}
-                data-tooltip-id="dock-tooltip"
-                data-tooltip-content={app.name}
-                data-tooltip-delay-show={150}
-                disabled={!app.canOpen}
-              >
-                <img
-                  src={`/images/${app.icon}`}
-                  alt={app.name}
-                  loading="lazy"
+              {app.href ? (
+                <a
+                  ref={(el) => (iconRefs.current[index] = el)}
+                  href={app.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={clsx(
-                    "w-12 h-15 transition-all duration-200",
-                    app.id === "facetime" && "w-[3.5rem] h-[3.5rem]",
-                    app.canOpen ? "" : "opacity-60"
+                    "dock-icon flex items-center justify-center",
+                    app.id === "facetime" && "mb-1"
                   )}
-                />
-              </button>
+                  aria-label={app.name}
+                  data-tooltip-id="dock-tooltip"
+                  data-tooltip-content={app.name}
+                  data-tooltip-delay-show={150}
+                >
+                  <img
+                    src={`/images/${app.icon}`}
+                    alt={app.name}
+                    loading="lazy"
+                    className={clsx(
+                      "w-12 h-16 transition-all duration-200",
+                      app.id === "facetime" && "w-[3.5rem] h-[3.5rem]",
+                      app.canOpen ? "" : "opacity-60"
+                    )}
+                  />
+                </a>
+              ) : (
+                <button
+                  ref={(el) => (iconRefs.current[index] = el)}
+                  type="button"
+                  className={clsx(
+                    "dock-icon",
+                    app.id === "facetime" && "mb-1"
+                  )}
+                  aria-label={app.name}
+                  onClick={() => toggleApp(app)}
+                  data-tooltip-id="dock-tooltip"
+                  data-tooltip-content={app.name}
+                  data-tooltip-delay-show={150}
+                  disabled={!app.canOpen}
+                >
+                  <img
+                    src={`/images/${app.icon}`}
+                    alt={app.name}
+                    loading="lazy"
+                    className={clsx(
+                      "w-12 h-15 transition-all duration-200",
+                      app.id === "facetime" && "w-[3.5rem] h-[3.5rem]",
+                      app.canOpen ? "" : "opacity-60"
+                    )}
+                  />
+                </button>
+              )}
             </li>
           </ul>
         ))}
