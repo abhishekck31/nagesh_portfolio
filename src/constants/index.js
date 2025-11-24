@@ -112,33 +112,40 @@ const techStack = [
 const socials = [
   {
     id: 1,
-    text: "Github",
-    icon: "/icons/github.svg",
-    bg: "#f4656b",
-    link: "https://github.com/JavaScript-Mastery-Pro",
+    text: "Instagram",
+    icon: "/icons/instagram.png",
+    bg: "#E4405F",
+    link: "https://www.instagram.com/nageshh1/",
   },
   {
     id: 2,
-    text: "Platform",
-    icon: "/icons/atom.svg",
-    bg: "#4bcb63",
-    link: "https://jsmastery.com/",
+    text: "LinkedIn",
+    icon: "/icons/linkedin.svg",
+    bg: "#0A66C2",
+    link: "https://www.linkedin.com/in/nagesh-pabbewar-2b221a360/",
   },
   {
     id: 3,
     text: "Twitter/X",
     icon: "/icons/twitter.svg",
-    bg: "#ff866b",
-    link: "https://x.com/jsmasterypro",
+    bg: "#1DA1F2",
+    link: "https://x.com/PabbewarNagesh",
   },
   {
     id: 4,
-    text: "LinkedIn",
-    icon: "/icons/linkedin.svg",
-    bg: "#05b6f6",
-    link: "https://www.linkedin.com/company/javascriptmastery/posts/?feedView=all",
+    text: "Calendly",
+    icon: "/icons/calendly.png",
+    bg: "#006BFF",
+    link: "https://calendly.com/pabbewarnagesh/30min",
   },
 ];
+
+const CONTACT_INFO = {
+  image: "/images/Nagesh3.jpg",
+  title: "Let's Connect",
+  description:
+    "Got a project in mind? Need motion graphics or video editing? Let's bring your vision to life!",
+};
 
 const photosLinks = [
   {
@@ -182,17 +189,6 @@ const gallery = [
     img: "/images/Nagesh3.jpg",
   },
 ];
-
-export {
-  navLinks,
-  navIcons,
-  dockApps,
-  blogPosts,
-  techStack,
-  socials,
-  photosLinks,
-  gallery,
-};
 
 const WORK_LOCATION = {
   id: 1,
@@ -434,7 +430,7 @@ const APPLICATIONS_LOCATION = {
   ],
 };
 
-export const locations = {
+const locations = {
   work: WORK_LOCATION,
   about: ABOUT_LOCATION,
   applications: APPLICATIONS_LOCATION,
@@ -454,4 +450,17 @@ const WINDOW_CONFIG = {
   videoplayer: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
 
-export { INITIAL_Z_INDEX, WINDOW_CONFIG };
+export {
+  navLinks,
+  navIcons,
+  dockApps,
+  blogPosts,
+  techStack,
+  socials,
+  CONTACT_INFO,
+  photosLinks,
+  gallery,
+  locations,
+  INITIAL_Z_INDEX,
+  WINDOW_CONFIG,
+};

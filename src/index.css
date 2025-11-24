@@ -621,6 +621,34 @@ body {
       }
     }
   }
+
+  .mac-notification {
+    @apply fixed top-4 left-1/2 -translate-x-1/2 z-[9999] max-w-md bg-blue-600/95 backdrop-blur-xl rounded-xl shadow-2xl cursor-pointer transition-all duration-300 transform -translate-y-[200%] px-4 py-3;
+
+    &.mac-notification-visible {
+      @apply translate-y-0;
+    }
+
+    .notification-time {
+      @apply absolute top-2 left-3 text-xs text-white/80 font-medium;
+    }
+
+    .notification-close {
+      @apply absolute top-2 right-3 p-1 hover:bg-white/20 rounded-full transition-colors text-white;
+    }
+
+    .notification-text {
+      @apply mt-4;
+
+      .notification-title {
+        @apply text-base font-semibold text-white mb-0.5;
+      }
+
+      .notification-subtitle {
+        @apply text-sm text-white/90;
+      }
+    }
+  }
 }
 
 @theme inline {

@@ -1,5 +1,5 @@
 import WindowControls from "#components/WindowControls";
-import { socials } from "#constants";
+import { socials, CONTACT_INFO } from "#constants";
 import WindowWrapper from "#hoc/WindowWrapper";
 
 const Contact = () => (
@@ -11,13 +11,13 @@ const Contact = () => (
 
     <div className="p-5 space-y-5">
       <img
-        src="/images/adrian.jpg"
-        alt="Adrian"
+        src={CONTACT_INFO.image}
+        alt="Nagesh"
         className="w-20 rounded-full"
       />
 
-      <h3>Let's Connect</h3>
-      <p>Got an idea? A bug to squash? Or just wanna talk tech? I'm in.</p>
+      <h3>{CONTACT_INFO.title}</h3>
+      <p>{CONTACT_INFO.description}</p>
 
       <ul>
         {socials.map(({ id, bg, link, icon, text }) => (
