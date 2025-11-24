@@ -113,7 +113,7 @@ body {
   }
 
   #safari {
-    @apply w-4xl sm:absolute top-40 left-2/12 bg-white dark:bg-dark-700 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden select-none max-sm:hidden;
+    @apply w-4xl sm:absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-dark-700 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden select-none max-sm:hidden;
 
     .search {
       @apply flex items-center gap-3 w-2/3 bg-white dark:bg-dark-500 border border-gray-300 dark:border-dark-300 rounded-lg px-3 py-2;
@@ -209,7 +209,7 @@ body {
   }
 
   #terminal {
-    @apply w-xl absolute top-32 left-1/12 bg-white dark:bg-dark-700 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-3xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-dark-700 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
     h2 {
       @apply font-bold text-sm text-center w-full;
@@ -299,7 +299,7 @@ body {
   }
 
   #contact {
-    @apply max-w-2xl absolute top-60 left-5/12 bg-white dark:bg-dark-700 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden text-black dark:text-white;
+    @apply max-w-2xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-dark-700 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden text-black dark:text-white;
 
     h2 {
       @apply font-bold text-sm text-center w-full;
@@ -359,7 +359,7 @@ body {
   }
 
   #photos {
-    @apply max-w-3xl absolute top-96 left-1/2 -translate-y-1/2 bg-white dark:bg-dark-700 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply max-w-3xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-dark-700 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
     .sidebar {
       @apply w-3/12 flex-none bg-gray-50 dark:bg-dark-300 border-r border-gray-200 dark:border-dark-500 flex flex-col p-5 text-black dark:text-white;
@@ -393,27 +393,11 @@ body {
       @apply p-5;
 
       ul {
-        @apply grid grid-cols-5 grid-rows-5 gap-2.5;
+        @apply flex flex-wrap gap-4;
 
         li {
           img {
-            @apply size-full object-cover rounded-lg;
-          }
-
-          &:first-child {
-            @apply row-start-1 row-span-3 col-start-1 col-span-3;
-          }
-
-          &:nth-child(2) {
-            @apply row-start-1 row-span-3 col-start-4 col-span-2;
-          }
-
-          &:nth-child(3) {
-            @apply row-start-4 row-span-2 col-start-3 col-span-3;
-          }
-
-          &:last-child {
-            @apply row-start-4 row-span-2 col-start-1 col-span-2;
+            @apply h-40 w-auto object-contain rounded-lg border border-gray-200 dark:border-dark-500;
           }
         }
       }
@@ -427,7 +411,7 @@ body {
       @apply p-5;
 
       ul {
-        @apply grid grid-cols-2 max-xs:grid-cols-1  gap-2.5;
+        @apply grid grid-cols-2 max-xs:grid-cols-1 gap-2.5;
 
         li {
           img {
@@ -439,7 +423,7 @@ body {
   }
 
   #resume {
-    @apply w-fit h-fit absolute top-16 left-7/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden dark:bg-dark-700;
+    @apply w-fit h-fit absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden dark:bg-dark-700;
 
     #window-header {
       h2 {
@@ -461,7 +445,7 @@ body {
   }
 
   #finder {
-    @apply absolute w-3xl left-40 top-20 shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl;
+    @apply absolute w-3xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl;
 
     .sidebar {
       @apply w-48 bg-gray-50 dark:bg-dark-300 border-r border-gray-200 dark:border-dark-500 flex flex-col p-5 space-y-3;
@@ -541,10 +525,26 @@ body {
   }
 
   #txtfile {
-    @apply w-md absolute top-36 right-32 bg-white dark:bg-dark-700 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden text-black dark:text-white;
+    @apply w-md absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-dark-700 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden text-black dark:text-white;
 
     h2 {
       @apply font-bold text-sm text-center w-full;
+    }
+
+    .experience-timeline {
+      @apply p-6 max-h-[70vh] overflow-y-auto;
+
+      .experience-card {
+        @apply bg-gray-50 dark:bg-dark-500 rounded-lg p-5 border border-gray-200 dark:border-dark-300 hover:shadow-md transition-shadow;
+
+        .experience-icon {
+          @apply w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0;
+        }
+
+        .skill-tag {
+          @apply px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-xs font-medium;
+        }
+      }
     }
   }
 
@@ -553,7 +553,7 @@ body {
   }
 
   #imgfile {
-    @apply w-xl absolute top-40 left-2/12 bg-white dark:bg-dark-700 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply max-w-5xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-dark-700 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
     #window-header {
       p {
@@ -562,10 +562,10 @@ body {
     }
 
     .preview {
-      @apply p-2 bg-gray-200 dark:bg-dark-700 max-h-[70vh];
+      @apply p-2 bg-gray-200 dark:bg-dark-700 max-h-[80vh];
 
       img {
-        @apply w-full h-fit object-contain object-center;
+        @apply w-full h-full object-contain object-center;
       }
     }
   }
@@ -734,6 +734,7 @@ body {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }

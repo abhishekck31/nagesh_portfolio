@@ -80,55 +80,32 @@ const dockApps = [
   },
 ];
 
-const blogPosts = [
-  {
-    id: 1,
-    date: "Sep 2, 2025",
-    title:
-      "TypeScript Explained: What It Is, Why It Matters, and How to Master It",
-    image: "/images/blog1.png",
-    link: "https://jsmastery.com/blog/typescript-explained-what-it-is-why-it-matters-and-how-to-master-it",
-  },
-  {
-    id: 2,
-    date: "Aug 28, 2025",
-    title: "The Ultimate Guide to Mastering Three.js for 3D Development",
-    image: "/images/blog2.png",
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-three-js-for-3d-development",
-  },
-  {
-    id: 3,
-    date: "Aug 15, 2025",
-    title: "The Ultimate Guide to Mastering GSAP Animations",
-    image: "/images/blog3.png",
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-gsap-animations",
-  },
-];
+const blogPosts = [];
 
 const techStack = [
   {
-    category: "Frontend",
-    items: ["React.js", "Next.js", "TypeScript"],
+    category: "Video Editing",
+    items: ["Premiere Pro", "Final Cut Pro", "DaVinci Resolve"],
   },
   {
-    category: "Mobile",
-    items: ["React Native", "Expo"],
+    category: "Motion Graphics",
+    items: ["After Effects", "Cinema 4D", "Nuke"],
   },
   {
-    category: "Styling",
-    items: ["Tailwind CSS", "Sass", "CSS"],
+    category: "3D Animation",
+    items: ["Blender", "Maya", "Houdini"],
   },
   {
-    category: "Backend",
-    items: ["Node.js", "Express", "NestJS", "Hono"],
+    category: "Design Tools",
+    items: ["Illustrator", "Photoshop", "Figma"],
   },
   {
-    category: "Database",
-    items: ["MongoDB", "PostgreSQL"],
+    category: "Compositing",
+    items: ["After Effects", "Nuke", "Fusion"],
   },
   {
-    category: "Dev Tools",
-    items: ["Git", "GitHub", "Docker"],
+    category: "Workflow",
+    items: ["Frame.io", "Adobe Creative Cloud", "Notion"],
   },
 ];
 
@@ -191,7 +168,20 @@ const photosLinks = [
   },
 ];
 
-const gallery = [];
+const gallery = [
+  {
+    id: 1,
+    img: "/images/Nagesh1.jpg",
+  },
+  {
+    id: 2,
+    img: "/images/Nagesh2.jpg",
+  },
+  {
+    id: 3,
+    img: "/images/Nagesh3.jpg",
+  },
+];
 
 export {
   navLinks,
@@ -299,45 +289,49 @@ const ABOUT_LOCATION = {
   children: [
     {
       id: 1,
-      name: "me.png",
-      icon: "/images/image.png",
-      kind: "file",
-      fileType: "img",
-      position: "top-10 left-5",
-      imageUrl: "/images/adrian.jpg",
-    },
-    {
-      id: 2,
-      name: "casual-me.png",
-      icon: "/images/image.png",
-      kind: "file",
-      fileType: "img",
-      position: "top-28 right-72",
-      imageUrl: "/images/adrian-2.jpg",
-    },
-    {
-      id: 3,
-      name: "conference-me.png",
-      icon: "/images/image.png",
-      kind: "file",
-      fileType: "img",
-      position: "top-52 left-80",
-      imageUrl: "/images/adrian-3.jpeg",
-    },
-    {
-      id: 4,
-      name: "about-me.txt",
+      name: "experience.txt",
       icon: "/images/txt.png",
       kind: "file",
       fileType: "txt",
-      position: "top-60 left-5",
-      subtitle: "Meet the Developer Behind the Code",
-      image: "/images/adrian.jpg",
-      description: [
-        "Hey! I’m Adrian 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
-        "I specialize in JavaScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",
-        "I’m big on clean UI, good UX, and writing code that doesn’t need a search party to debug.",
-        "Outside of dev work, you'll find me tweaking layouts at 2AM, sipping overpriced coffee, or impulse-buying gadgets I absolutely convinced myself I needed 😅",
+      position: "top-10 left-5",
+      subtitle: "Professional Experience",
+      experiences: [
+        {
+          title: "Assistant Video Editor",
+          company: "Avalanche",
+          duration: "Mar 2024 - Present · 1 yr 9 mos",
+          location: "Remote · Full-time",
+          responsibilities: [
+            "Led motion design and editing for the Adoption Campaign, creating long-form, high-retention videos with minimalist animated styles",
+            "Designed cinematic explainer shorts on blockchain, DeFi, and ecosystem topics",
+            "Collaborated closely with creative leads to ensure storytelling clarity and visual coherence"
+          ],
+          skills: ["After Effects", "Adobe Premiere Pro", "Motion Graphics", "Video Editing"]
+        },
+        {
+          title: "Senior Graphic Designer",
+          company: "UPSC Infocademy",
+          duration: "Jan 2022 - Mar 2024 · 2 yrs 3 mos",
+          location: "Tamil Nadu, India · Remote · Part-time",
+          responsibilities: [
+            "Designed the Monthly Info-Bite Magazine and visual assets for the Mains100 Series",
+            "Created over 50+ Instagram carousel posts and short-form visual explainers tailored to educational content",
+            "Worked in a high-output content team focused on design accuracy and visual learning"
+          ],
+          skills: ["Graphic Design", "Magazine Design", "Social Media Content", "Visual Communication"]
+        },
+        {
+          title: "Video Editor",
+          company: "Sizi Stocks",
+          duration: "Oct 2019 - Dec 2021 · 2 yrs 3 mos",
+          location: "Bhiwandi, Maharashtra, India · On-site · Full-time",
+          responsibilities: [
+            "Edited over 100+ videos across two multilingual channels covering stock market content from basics to advanced strategies",
+            "Produced stock market explainer series with crisp motion and clear instructional pacing",
+            "Also edited vlog-style content and sizzle reels for internal and external use"
+          ],
+          skills: ["Video Editing", "Motion Graphics", "Content Production", "Multilingual Content"]
+        }
       ],
     },
   ],
@@ -444,7 +438,6 @@ export const locations = {
   work: WORK_LOCATION,
   about: ABOUT_LOCATION,
   applications: APPLICATIONS_LOCATION,
-  trash: TRASH_LOCATION,
 };
 
 const INITIAL_Z_INDEX = 1000;

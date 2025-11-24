@@ -8,12 +8,12 @@ const Terminal = () => (
   <>
     <div id="window-header">
       <WindowControls target="terminal" />
-      <h2>Tech Stack</h2>
+      <h2>My tools</h2>
     </div>
 
     <div className="techstack">
       <p>
-        <span className="font-bold">@adrian %</span> show tech stack
+        <span className="font-bold">Nagesh : </span> I'm Proeficient in these Softwares
       </p>
 
       <div className="label">
