@@ -72,6 +72,14 @@ const dockApps = [
     showOnMobile: false,
   },
   {
+    id: "facetime",
+    name: "Schedule Meeting",
+    icon: "facetime_icon.png",
+    canOpen: true,
+    showOnMobile: false,
+    href: "https://calendly.com/pabbewarnagesh/30min",
+  },
+  {
     id: "trash",
     name: "Archive", // was "Trash"
     icon: "trash.png",

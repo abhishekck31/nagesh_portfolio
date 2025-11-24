@@ -57,6 +57,12 @@ const Dock = () => {
   const toggleApp = (app) => {
     if (!app.canOpen) return;
 
+    // If app has an href, open it in a new tab
+    if (app.href) {
+      window.open(app.href, "_blank");
+      return;
+    }
+
     const window = windows[app.id];
 
     if (window.isOpen) {
@@ -69,30 +75,34 @@ const Dock = () => {
   return (
     <section id="dock">
       <div ref={dockRef} className="dock-container">
-        {dockApps.map(({ id, name, icon, canOpen, showOnMobile }) => (
+        {dockApps.map((app) => (
           <ul
-            key={id ?? name}
+            key={app.id ?? app.name}
             className={clsx(
               "relative flex justify-center",
-              !showOnMobile && "max-sm:hidden"
+              !app.showOnMobile && "max-sm:hidden"
             )}
           >
             <li>
               <button
                 type="button"
                 className="dock-icon"
-                aria-label={name}
-                onClick={() => toggleApp({ id, canOpen })}
+                aria-label={app.name}
+                onClick={() => toggleApp(app)}
                 data-tooltip-id="dock-tooltip"
-                data-tooltip-content={name}
+                data-tooltip-content={app.name}
                 data-tooltip-delay-show={150}
-                disabled={!canOpen}
+                disabled={!app.canOpen}
               >
                 <img
-                  src={`/images/${icon}`}
-                  alt={name}
+                  src={`/images/${app.icon}`}
+                  alt={app.name}
                   loading="lazy"
-                  className={canOpen ? "" : "opacity-60"}
+                  className={clsx(
+                    "w-12 h-15 transition-all duration-200",
+                    app.id === "facetime" && "w-[3.5rem] h-[3.5rem]",
+                    app.canOpen ? "" : "opacity-60"
+                  )}
                 />
               </button>
             </li>
