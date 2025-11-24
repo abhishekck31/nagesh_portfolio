@@ -68,7 +68,7 @@ const Finder = () => {
               className={item.position}
               onClick={() => openItem(item)}
             >
-              <img src={item.icon} alt={item.name} />
+              <img src={item.icon} alt={item.name} className="size-14" />
               <p>{item.name}</p>
             </li>
           ))}

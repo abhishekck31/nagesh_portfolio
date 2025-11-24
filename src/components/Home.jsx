@@ -27,7 +27,7 @@ const Home = () => {
         {projects.map((project) => (
           <li
             key={project.id}
-            className={clsx("group folder", project.position)}
+            className={clsx("group folder", project.desktopPosition)}
             onClick={() => handleOpenProjectFinder(project)}
           >
             <img src={project.icon} alt={project.name} className="w-20" />

@@ -234,6 +234,7 @@ const WORK_LOCATION = {
       icon: "/icons/folder.png",
       kind: "folder",
       position: "top-10 left-5",
+      desktopPosition: "top-10 left-5",
       children: [
         {
           id: 1,
@@ -251,7 +252,8 @@ const WORK_LOCATION = {
       name: "Short Videos",
       icon: "/icons/folder.png",
       kind: "folder",
-      position: "top-40 left-5",
+      position: "top-10 left-32",
+      desktopPosition: "top-40 left-5",
       children: [
         {
           id: 1,
@@ -269,7 +271,8 @@ const WORK_LOCATION = {
       name: "Long videos",
       icon: "/icons/folder.png",
       kind: "folder",
-      position: "top-72 left-5",
+      position: "top-10 left-60",
+      desktopPosition: "top-72 left-5",
       children: [
         {
           id: 1,
@@ -287,7 +290,8 @@ const WORK_LOCATION = {
       name: "Motion Graphics",
       icon: "/icons/folder.png",
       kind: "folder",
-      position: "top-[26rem] left-5",
+      position: "top-10 left-[22rem]",
+      desktopPosition: "top-[26rem] left-5",
       children: [
         {
           id: 1,
