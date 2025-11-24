@@ -208,7 +208,7 @@ const WORK_LOCATION = {
         {
           id: 1,
           name: "AI Film Demo",
-          icon: "/images/safari.png",
+          icon: "/icons/play.png",
           kind: "file",
           fileType: "url",
           href: "https://youtu.be/dQw4w9WgXcQ", // Placeholder
@@ -227,7 +227,7 @@ const WORK_LOCATION = {
         {
           id: 1,
           name: "Short Video Demo",
-          icon: "/images/safari.png",
+          icon: "/icons/play.png",
           kind: "file",
           fileType: "url",
           href: "https://youtu.be/dQw4w9WgXcQ", // Placeholder
@@ -246,7 +246,7 @@ const WORK_LOCATION = {
         {
           id: 1,
           name: "Long Video Demo",
-          icon: "/images/safari.png",
+          icon: "/icons/play.png",
           kind: "file",
           fileType: "url",
           href: "https://youtu.be/dQw4w9WgXcQ", // Placeholder
@@ -265,7 +265,7 @@ const WORK_LOCATION = {
         {
           id: 1,
           name: "Motion Graphics Demo",
-          icon: "/images/safari.png",
+          icon: "/icons/play.png",
           kind: "file",
           fileType: "url",
           href: "https://youtu.be/dQw4w9WgXcQ", // Placeholder
