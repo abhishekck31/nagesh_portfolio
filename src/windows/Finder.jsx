@@ -28,7 +28,7 @@ const Finder = () => {
 
     const windowKey = `${item.fileType}${item.kind}`;
     openWindow(windowKey, item);
-    setTimeout(() => useWindowStore.getState().focusWindow(windowKey), 0);
+    setTimeout(() => useWindowStore.getState().focusWindow(windowKey), 50);
   };
 
   const renderList = (items) =>

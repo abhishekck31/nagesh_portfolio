@@ -330,6 +330,24 @@ const ABOUT_LOCATION = {
         }
       ],
     },
+    {
+      id: 2,
+      name: "About me.txt",
+      icon: "/images/txt.png",
+      kind: "file",
+      fileType: "txt",
+      position: "top-10 left-32",
+      subtitle: "About Me",
+      description: [
+        "I specialize in crafting minimalist motion designs using dotted and lined visual styles to break down complex topics with clarity and cinematic impact.",
+        "",
+        "Currently, I'm working with Avalanche on their Adoption Campaign, producing high-retention, minimalist explainer videos that blend storytelling with modern motion design principles. I've also contributed to short-form crypto explainers that prioritize viewer engagement and clarity.",
+        "",
+        "I work with industry-standard tools like Adobe After Effects, Premiere Pro, and Illustrator — combining them to create motion-driven narratives that educate and retain. My past experience ranges from finance content to education, giving me a strong sense of how to simplify and visualize dense topics.",
+        "",
+        "Looking ahead, I'm diving into 3D modeling and rendering, aiming to integrate it into my motion workflows for richer, deeper storytelling in animation and design.",
+      ],
+    },
   ],
 };
 

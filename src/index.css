@@ -525,7 +525,7 @@ body {
   }
 
   #txtfile {
-    @apply w-md absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-dark-700 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden text-black dark:text-white;
+    @apply w-2xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-dark-700 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden text-black dark:text-white;
 
     h2 {
       @apply font-bold text-sm text-center w-full;
